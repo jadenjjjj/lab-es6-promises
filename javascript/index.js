@@ -52,37 +52,45 @@ getInstruction("mashedPotatoes", 0, (step1) => {
 obtainInstruction('steak', 0)
   .then((step0) => {
     document.querySelector("#steak").innerHTML += `<li>${step0}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 1)
   })
   .then((step1) => {
     document.querySelector("#steak").innerHTML += `<li>${step1}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 2)
   })
   .then((step2) => {
     document.querySelector("#steak").innerHTML += `<li>${step2}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 3)
   })
   .then((step3) => {
     document.querySelector("#steak").innerHTML += `<li>${step3}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 4)
   })
   .then((step4) => {
     document.querySelector("#steak").innerHTML += `<li>${step4}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 5)
   })
   .then((step5) => {
     document.querySelector("#steak").innerHTML += `<li>${step5}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 6)
   })
   .then((step6) => {
     document.querySelector("#steak").innerHTML += `<li>${step6}</li>`
+    throw new Error('something went wrong.')
     return obtainInstruction("steak", 7)
   })
   .then((step7) => {
     document.querySelector("#steak").innerHTML += `<li>${step7}</li>`
     document.querySelector("#steakImg").removeAttribute("hidden")
     document.querySelector("#steak").innerHTML += `<li>Steak is ready!</li>`
-   
+  }, reason => {
+    console.log('Error happend ' + reason)
   })
 // Iteration 3 using async/await
 // ...
